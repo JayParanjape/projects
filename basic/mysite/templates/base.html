@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Django Assignment{% endblock %}</title>
+    <style>
+    	a{
+    		color: blue;
+    	}
+    </style>
+  </head>
+  <body bgcolor="#FBBA0A">
+    <header>
+      <h1>ULTRA MEMO - U GOT INSTINCT TO COME HERE</h1>
+      {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}">logout</a>
+      {% else %}
+        <a href="{% url 'login' %}">login</a> / <a href="{% url 'signup' %}">signup</a>
+      {% endif %}
+      <hr>
+    </header>
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+  </body>
+</html>
