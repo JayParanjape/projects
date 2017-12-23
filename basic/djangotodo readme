@@ -1,0 +1,7 @@
+#create a directory structure and files as given in
+#https://github.com/JayParanjape/projects/basic
+#In the terminal in basic, write the following commands:
+python3 manage.py makemigrations core
+python3 manage.py sqlmigrate polls 0001
+python3 manage.py migrate
+python3 manage.py runserver
